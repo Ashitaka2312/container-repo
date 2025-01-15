@@ -14,10 +14,12 @@ jobs:
 
        steps:
         - name: Exemple
-           run: |
+          run: |
             echo "Mon exemple"
             echo "Env Name: ${{ github.event.inputs.Environment}}"
         - name: Runner Variable
           run: echo "${{ toJSON(runner)}}"
         - name: Secrets Variable
-         run: echo '${{}}'
+          run: echo '${{ toJSON(secrets)}}'
+        - name: Env Variable
+          run: echo "${{ vars.My_API_URL}}"
