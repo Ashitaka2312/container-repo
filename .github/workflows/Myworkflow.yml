@@ -13,5 +13,11 @@ jobs:
        runs-on: ubuntu-latest
 
        steps:
-         - name: Exemple
-           run: echo "Mon exemple"
+        - name: Exemple
+           run: |
+            echo "Mon exemple"
+            echo "Env Name: ${{ github.event.inputs.Environment}}"
+        - name: Runner Variable
+          run: echo "${{ toJSON(runner)}}"
+        - name: Secrets Variable
+         run: echo '${{}}'
