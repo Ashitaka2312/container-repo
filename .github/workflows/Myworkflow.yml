@@ -13,6 +13,5 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            
-name: Exemple
-            run: echo "Mon exemple"
+            - name: Exemple
+              run: echo "Mon exemple"
